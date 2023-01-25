@@ -12,7 +12,9 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "UITestingPlus", dependencies: []),
+        .target(name: "UITestingPlus",
+                dependencies: [],
+                linkerSettings: [ .linkedFramework("XCTest")]),
         .testTarget(name: "UITestingPlusTests", dependencies: ["UITestingPlus"]),
     ]
 )
