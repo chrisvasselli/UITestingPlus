@@ -14,7 +14,7 @@ let package = Package(
     targets: [
         .target(name: "UITestingPlus",
                 dependencies: [],
-                linkerSettings: [ .linkedFramework("XCTest")]),
+                swiftSettings: [.define("ENABLE_TESTING_SEARCH_PATHS")]),
         .testTarget(name: "UITestingPlusTests", dependencies: ["UITestingPlus"]),
     ]
 )
